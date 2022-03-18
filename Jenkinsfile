@@ -8,7 +8,7 @@ node {
         /* Wait until mysql service is up */
         sh 'cat /etc/redhat-release'
         sh 'uname -a'
-        sh 'which mysqladmin'
+   //     sh 'which mysqladmin'
         sh 'which mysql'
    //     sh 'while ! ping 0.0.0.0 --silent; do sleep 1; done'
         /* Run some tests which require MySQL */
