@@ -6,6 +6,8 @@ node {
      */
     docker.image('mysql:5').withRun('-e "MYSQL_ROOT_PASSWORD=my-secret-pw" -p 3306:3306') { c ->
         /* Wait until mysql service is up */
+        sh 'cat /etc/redhat-release'
+        sh 'uname -a'
         sh 'which mysqladmin'
    //     sh 'while ! ping 0.0.0.0 --silent; do sleep 1; done'
         /* Run some tests which require MySQL */
